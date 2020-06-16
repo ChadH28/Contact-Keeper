@@ -1,8 +1,16 @@
 // bringing in express server
 const express = require('express');
+const connectDB = require('./Config/db');
+
 
 // initialzing express into a variable
 const app = express();
+
+// Connect database
+connectDB();
+
+// Init Middleware
+app.use(express.json({extended: false}))
 
 // adding endpoint /route
 app.get('/', (req,res) => res.json({msg: "Welcome to the contact keeper api"}))

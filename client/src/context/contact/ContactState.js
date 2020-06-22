@@ -29,8 +29,10 @@ const ContactState = props => {
     // Get Contacts
     const getContacts = async () => {
         try {
-            const res = await axios.get('api/contacts');
-            dispatch({type: GET_CONTACTS, payload: res.data })
+            const res = await axios.get('/api/contacts');
+            dispatch({
+                type: GET_CONTACTS,
+                payload: res.data })
         } catch (err) {
             dispatch({
             type: CONTACT_ERROR,
@@ -48,12 +50,15 @@ const ContactState = props => {
         }
 
         try {
-            const res = await axios.post('api/contacts', contact, config);
-            dispatch({type: ADD_CONTACT, payload: res.data })
+            const res = await axios.post('/api/contacts', contact, config);
+            dispatch({
+                type: ADD_CONTACT,
+                payload: res.data
+            })
         } catch (err) {
             dispatch({
-            type: CONTACT_ERROR,
-            payload: err.response.msg
+                type: CONTACT_ERROR,
+                payload: err.response.msg
             })
         }
     };
@@ -61,7 +66,7 @@ const ContactState = props => {
     // Delete contact
     const deleteContact = async id => {
         try {
-            const res = await axios.delete(`api/contacts/${id}`);
+            const res = await axios.delete(`/api/contacts/${id}`);
             dispatch({type: DELETE_CONTACT, payload: res.data })
         } catch (err) {
             dispatch({
@@ -83,16 +88,14 @@ const ContactState = props => {
         dispatch({type: CLEAR_CURRENT})
     };
     // Update contact
-    const updateContact = contact => {
-        const updateContact = async contact => {
+    const updateContact = async contact => {
             const config = {
                 headers: {
                     'Content-Type': 'application/json'
                 }
             }
-    
             try {
-                const res = await axios.post(`api/contacts/${contact._id}`, contact, config);
+                const res = await axios.post(`/api/contacts/${contact._id}`, contact, config);
                 dispatch({type: UPDATE_CONTACT, payload: res.data})
             } catch (err) {
                 dispatch({
@@ -102,7 +105,6 @@ const ContactState = props => {
             }
         };
         
-    };
     // Filter contacts
     const filterContacts = text => {
         dispatch({type: FILTER_CONTACTS, payload: text})

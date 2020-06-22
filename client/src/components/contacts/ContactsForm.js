@@ -1,8 +1,6 @@
 import React, { useState, useContext, useEffect} from 'react';
 import ContactContext from '../../context/contact/contactContext';
 
-
-
 const ContactsForm = () => {
     const contactContext = useContext(ContactContext);
 
@@ -55,7 +53,7 @@ const ContactsForm = () => {
 
     return (
         <form onSubmit={onSubmit}>
-            <h2 className='text-primary'>{current ? 'Edit Contact' : 'Add Contact'}</h2>
+            <h2 className='text-success'>{current ? 'Edit Contact' : 'Add Contact'}</h2>
             <input
                 type='text'
                 placeholder='Name'
@@ -97,14 +95,15 @@ const ContactsForm = () => {
                 <input
                     type='submit'
                     value={current ? 'Update Contact' : 'Add Contact'}
-                    className='btn btn-primary btn-block'
+                    className='btn btn-success btn-block'
                 />
             </div>
             {current && (
                 <div>
                     <button
-                    className='btn btn-light btn-block'
-                    onClick={clearAll}>Clear</button>
+                        className='btn btn-light btn-block'
+                        onClick={clearAll}
+                    >Clear</button>
                 </div>
             )}
         </form>

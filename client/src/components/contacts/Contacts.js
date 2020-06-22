@@ -34,7 +34,7 @@ const Contacts = () => {
                 </CSSTransition>
                 ))
                 }
-                </TransitionGroup>) : <Spinner/>}
+                </TransitionGroup>) : (<Spinner/>)}
             
         </Fragment>
     )

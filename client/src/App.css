@@ -97,6 +97,8 @@ img {
   margin: 0.7rem 0;
 }
 
+
+
 /* List */
 .list {
   margin: 0.5rem 0;
@@ -194,6 +196,7 @@ img {
   margin-right: 0.5rem;
   transition: opacity 0.2s ease-in;
   outline: none;
+  border-radius: 50px;
 }
 
 .btn-link {
@@ -315,6 +318,7 @@ textarea {
   padding: 0.4rem;
   font-size: 1.2rem;
   border: 1px solid #ccc;
+  border-radius: 50px;
 }
 
 input[type='submit'],
@@ -324,6 +328,7 @@ button {
 
 .form-group {
   margin: 1.2rem 0;
+  
 }
 
 .form-group input {
@@ -370,13 +375,13 @@ table th {
   display: flex;
 }
 
-.navbar a {
+.navbar .btn {
   color: #fff;
   padding: 0.45rem;
   margin: 0 0.25rem;
 }
 
-.navbar a:hover {
+.navbar .btn:hover {
   color: var(--light-color);
 }
 

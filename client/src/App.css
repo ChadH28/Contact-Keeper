@@ -19,7 +19,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.6;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   color: #333;
 }
 
@@ -165,6 +165,7 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 2rem;
+  margin-top: 30px;
 }
 
 .grid-3 {
@@ -316,6 +317,7 @@ textarea {
   display: block;
   width: 100%;
   padding: 0.4rem;
+  padding-left: 15px;
   font-size: 1.2rem;
   border: 1px solid #ccc;
   border-radius: 50px;
@@ -373,6 +375,7 @@ table th {
 
 .navbar ul {
   display: flex;
+  margin-top: 20px;
 }
 
 .navbar .btn {
@@ -444,4 +447,33 @@ table th {
     text-align: center;
     justify-content: center;
   }
+}
+
+
+
+#username{
+  border: none;
+  padding: 10px;
+  background-color:rgba(255, 0, 0, 0);
+  border-radius: 0%;
+  padding-right: 15px;
+  border-right: white solid 2px;
+
+}
+
+#logout-btn{
+  padding: 10px;
+}
+
+*:focus {
+  outline: none;
+  border: none;
+}
+
+#logo{
+  width: 180px;
+  height: 100px;
+  padding: 0px;
+  margin-bottom: -25px;
+  margin-top: -20px;
 }

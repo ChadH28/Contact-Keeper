@@ -11,10 +11,10 @@ connectDB();
 // Init Middleware
 app.use(express.json({ extended: false }));
 
-// adding endpoint /route
-app.get("/", (req, res) =>
-  res.json({ msg: "Welcome to the contact keeper api" })
-);
+// // adding endpoint /route
+// app.get("/", (req, res) =>
+//   res.json({ msg: "Welcome to the contact keeper api" })
+// );
 
 // Defining Routes
 app.use("/api/users", require("./Routes/users"));

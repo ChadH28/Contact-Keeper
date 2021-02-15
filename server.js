@@ -7,6 +7,9 @@ const app = express();
 
 // Connect database
 connectDB();
+// made a enviromental variable
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => console.log(`SERVER STARTED ON PORT ${PORT}`));
 
 // Init Middleware
 app.use(express.json({ extended: false }));
@@ -15,6 +18,7 @@ app.use(express.json({ extended: false }));
 app.use("/api/users", require("./Routes/users"));
 app.use("/api/auth", require("./Routes/auth"));
 app.use("/api/contacts", require("./Routes/contacts"));
+
 
 // Always put below the routes
 // Serve static assets in production
@@ -26,8 +30,3 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "client", "build", "index.html"))
   );
 }
-
-// made a enviromental variable
-const PORT = process.env.PORT || 5000;
-
-app.listen(PORT, () => console.log(`SERVER STARTED ON PORT ${PORT}`));

@@ -47,7 +47,7 @@ const Navbar = ({title, icon}) => {
       <div className="navbar bg-success">
         <div className="container">
           <div className="navbar-brand">
-            <img id="logo" className="img-fluid" src={logo} />
+            <img id="logo" className="img-fluid" src={logo} alt="COMPANYLOGO" />
           </div>
           <ul>{isAuthenticated ? authLinks : guestLinks}</ul>
         </div>

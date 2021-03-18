@@ -37,7 +37,7 @@ const ContactItem = ({ contact }) => {
                 )}
             </ul>
             <p>
-                <button className='btn btn-dark btn-sm' onClick={() => setCurrent(contact)}><i class="fas fa-user-edit"></i></button>
+                <button className='btn btn-dark btn-sm' onClick={() => setCurrent(contact)}><i className="fas fa-user-edit"></i></button>
                 <button className='btn btn-danger btn-sm' onClick={onDelete}><i className='fas fa-trash'/></button>
             </p>
         </div>

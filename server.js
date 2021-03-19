@@ -15,9 +15,9 @@ app.listen(PORT, () => console.log(`SERVER STARTED ON PORT ${PORT}`));
 app.use(express.json({ extended: false }));
 
 // Defining Routes
-app.use("/api/users", require("./Routes/users"));
-app.use("/api/auth", require("./Routes/auth"));
-app.use("/api/contacts", require("./Routes/contacts"));
+app.use("/api/users", require("./routes/users"));
+app.use("/api/auth", require("./routes/auth"));
+app.use("/api/contacts", require("./routes/contacts"));
 
 
 // Always put below the routes
